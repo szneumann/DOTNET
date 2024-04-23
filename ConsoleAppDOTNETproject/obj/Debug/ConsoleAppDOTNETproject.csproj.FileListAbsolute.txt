@@ -1,0 +1,14 @@
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\bin\Debug\ConsoleAppDOTNETproject.exe.config
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\bin\Debug\ConsoleAppDOTNETproject.exe
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\bin\Debug\ConsoleAppDOTNETproject.pdb
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.csproj.AssemblyReference.cache
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.csproj.CoreCompileInputs.cache
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.exe
+C:\Users\sneumanx\source\repos\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.pdb
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\bin\Debug\ConsoleAppDOTNETproject.exe.config
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\bin\Debug\ConsoleAppDOTNETproject.exe
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\bin\Debug\ConsoleAppDOTNETproject.pdb
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.csproj.AssemblyReference.cache
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.csproj.CoreCompileInputs.cache
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.exe
+C:\GIT\bajoajo\ConsoleAppDOTNETproject\obj\Debug\ConsoleAppDOTNETproject.pdb
