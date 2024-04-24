@@ -1,0 +1,7 @@
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\bin\Debug\Zadanie3.exe.config
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\bin\Debug\Zadanie3.exe
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\bin\Debug\Zadanie3.pdb
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\obj\Debug\Zadanie3.csproj.AssemblyReference.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\obj\Debug\Zadanie3.csproj.CoreCompileInputs.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\obj\Debug\Zadanie3.exe
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3\obj\Debug\Zadanie3.pdb

@@ -1,28 +1,47 @@
 ﻿using System;
 using System.IO;
-using System.Text;
+
 class Program
 {
     static void Main()
     {
-        string path = @"C:\ścieżka\do\pliku.txt";
+        // Ścieżka do pliku tekstowego
+        string filePath = @"C:\Users\dev\Desktop\tekst.txt";
+
         try
         {
-            // Otwarcie strumienia do zapisu do pliku (jeśli nie istnieje, zostanie utworzony)
-            using (FileStream fs = new FileStream(path, FileMode.Create))
+            // Otwieranie pliku za pomocą FileStream
+            using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
             {
-                // Tworzenie ciągu znaków do zapisania
-                string data = "To jest przykładowy tekst do zapisania w pliku.";
-                // Konwersja ciągu znaków na tablicę bajtów w formacie UTF-8
-                byte[] byteData = Encoding.UTF8.GetBytes(data);
-                // Zapis danych do pliku
-                fs.Write(byteData, 0, byteData.Length);
-                Console.WriteLine("Dane zostały zapisane do pliku.");
+                // Tworzenie czytnika StreamReader
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    // Odczytywanie i wyświetlanie zawartości pliku
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
             }
         }
-        catch (IOException ex)
+
+        catch (FileNotFoundException)
         {
-            Console.WriteLine($"Wystąpił błąd wejścia/wyjścia: {ex.Message}");
+            Console.WriteLine("Plik nie istnieje.");
         }
+        catch (IOException e)
+        {
+            Console.WriteLine($"Wystąpił błąd wejścia-wyjścia: {e.Message}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Wystąpił nieoczekiwany błąd: {e.Message}");
+        }
+        Console.ReadKey();
     }
 }
+
+
+
+
