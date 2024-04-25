@@ -1,0 +1,14 @@
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\bin\Debug\net8.0\Zadanie7.exe
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\bin\Debug\net8.0\Zadanie7.deps.json
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\bin\Debug\net8.0\Zadanie7.runtimeconfig.json
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\bin\Debug\net8.0\Zadanie7.dll
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\bin\Debug\net8.0\Zadanie7.pdb
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.AssemblyInfoInputs.cache
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.AssemblyInfo.cs
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.csproj.CoreCompileInputs.cache
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.dll
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\refint\Zadanie7.dll
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.pdb
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\Zadanie7.genruntimeconfig.cache
+C:\Users\dev\source\repos\Zadanie7\Zadanie7\obj\Debug\net8.0\ref\Zadanie7.dll
