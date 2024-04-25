@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dev\\source\\repos\\Zadanie6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{73AEB09B-666E-4B23-8939-5AEBD77D8224}|Zadanie6\\Zadanie6.csproj|c:\\users\\dev\\source\\repos\\zadanie6\\zadanie6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AEB09B-666E-4B23-8939-5AEBD77D8224}|Zadanie6\\Zadanie6.csproj|solutionrelative:zadanie6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dev\\source\\repos\\Zadanie6\\Zadanie6\\Program.cs",
+              "RelativeDocumentMoniker": "Zadanie6\\Program.cs",
+              "ToolTip": "C:\\Users\\dev\\source\\repos\\Zadanie6\\Zadanie6\\Program.cs",
+              "RelativeToolTip": "Zadanie6\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T17:14:55.67Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\bin\Debug\net8.0\Zadanie6.exe
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\bin\Debug\net8.0\Zadanie6.deps.json
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\bin\Debug\net8.0\Zadanie6.runtimeconfig.json
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\bin\Debug\net8.0\Zadanie6.dll
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\bin\Debug\net8.0\Zadanie6.pdb
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.AssemblyInfoInputs.cache
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.AssemblyInfo.cs
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.csproj.CoreCompileInputs.cache
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.dll
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\refint\Zadanie6.dll
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.pdb
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\Zadanie6.genruntimeconfig.cache
+C:\Users\dev\source\repos\Zadanie6\Zadanie6\obj\Debug\net8.0\ref\Zadanie6.dll
