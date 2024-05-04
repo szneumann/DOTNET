@@ -1,6 +1,0 @@
-C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_1\Zadanie2_1\obj\Debug\net8.0\Zadanie2_1.csproj.AssemblyReference.cache
-C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_1\Zadanie2_1\obj\Debug\net8.0\Zadanie2_1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_1\Zadanie2_1\obj\Debug\net8.0\Zadanie2_1.AssemblyInfoInputs.cache
-C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_1\Zadanie2_1\obj\Debug\net8.0\Zadanie2_1.AssemblyInfo.cs
-C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_1\Zadanie2_1\obj\Debug\net8.0\Zadanie2_1.csproj.CoreCompileInputs.cache
-C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_1\Zadanie2_1\obj\Debug\net8.0\Zadanie2_1.sourcelink.json
