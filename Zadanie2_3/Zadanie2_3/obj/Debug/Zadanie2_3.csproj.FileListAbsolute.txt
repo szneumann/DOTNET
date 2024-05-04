@@ -1,0 +1,10 @@
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\bin\Debug\Zadanie2_3.exe.config
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\bin\Debug\Zadanie2_3.exe
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\bin\Debug\Zadanie2_3.pdb
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.csproj.AssemblyReference.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.Form1.resources
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.Properties.Resources.resources
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.csproj.GenerateResource.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.csproj.CoreCompileInputs.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.exe
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie2_3\Zadanie2_3\obj\Debug\Zadanie2_3.pdb
