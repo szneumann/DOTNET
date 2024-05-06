@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Microsoft.VisualBasic.Devices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
@@ -17,9 +18,8 @@ namespace Zadanie2_3
     {
         private PerformanceCounter cpuCounter;
         private PerformanceCounter ramCounter;
-        private PerformanceCounter maxRAM;
         private PerformanceCounter threadCounter;
-        private PerformanceCounter threadCounter_total;
+        private PerformanceCounter thread_totalCounter;
         public Form1()
         {
             InitializeComponent();
@@ -29,42 +29,64 @@ namespace Zadanie2_3
         // Inicjalizacja liczników
         private void InitialiseCPUCounter()
         {
+            //Monitorowanie użycia procesora
             cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-            // Dla bieżącego procesu:
+            // Monitorowanie liczby wątków dla bieżącego procesu:
             threadCounter = new PerformanceCounter("Process", "Thread Count", Process.GetCurrentProcess().ProcessName);
-            // Dla całego systemu
-            threadCounter_total = new PerformanceCounter("Process", "Thread Count", "_Total");
+            // Monitorowanie liczby wątków dla całego systemu
+            thread_totalCounter = new PerformanceCounter("Process", "Thread Count", "_Total");
         }
         private void InitialiseRAMCounter()
         {
+            // Monitorowanie użycia pamięci RAM.
             ramCounter = new PerformanceCounter("Memory", "Available MBytes");
-            maxRAM = new PerformanceCounter("Hyper-v Dynamic Memory VM", "Physical Memory");
         }
 
         // Załadowanie strony głównej
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
-            maxiram.Text = maxRAM.ToString();
             // Wywołaj metodę aktualizacji liczników co sekundę
             Timer timer = new Timer();
             timer.Interval = 1000; // 1000 milisekund = 1 sekunda
             timer.Tick += new EventHandler((s, ev) => UpdateCounters());
             timer.Start();
         }
-        // updater wartości cpu i RAM    
+
+        // updater wartości CPU i RAM    
        private void UpdateCounters()
         {
             // Pobierz wartości z liczników
             float cpuUsage = cpuCounter.NextValue();
             float availableRAM = ramCounter.NextValue();
             float threadCount = threadCounter.NextValue();
-            float threadCounttotal = threadCounter_total.NextValue();
+            float threadtotalCount = thread_totalCounter.NextValue();
+            
+            // Sprawdzenie czy wartość cpuUsage nie przekracza wcześniej ustalonej wartości
+            // Na mojej platformie naprawdę samo odpalenie kodu i wejście w menu start Windowsa
+            // podwyższa tę wartość do 40%
+            if (cpuUsage > 35) 
+            {
+                // Jeśli wcześniej ustalona wartość zostaje przekroczona, dokonywany jest wpis w rejestrze.
+                DialogResult dr = MessageBox.Show($"Przekroczony limit {cpuUsage} > 35", "cpu over 35", MessageBoxButtons.OK , MessageBoxIcon.Information);
+                            
+                registerCPUusage(cpuUsage);
+                
+            }
+            
 
             // Wyświetl wartości w kontrolkach
             lblCPU.Text = $"Użycie procesora: {cpuUsage}%";
             textBox2.Text = $"Dostępna pamięć RAM: {availableRAM} MB";
             thread_lbl.Text = $"Wartość licznika liczby wątków: {threadCount}";
-            threadtotalbox.Text = $"Wartość dla całego systemu: {threadCounttotal}";
+            threadtotalbox.Text = $"Wartość dla całego systemu: {threadtotalCount}";
+        }
+
+        private void registerCPUusage(float value)
+        {
+            // Symulacja niestandardowego zdarzenia
+            string CPUusageMessage = $"Przekroczony limit {value} > 35%";
+            // Zapisujemy niestandardowe zdarzenie do dziennika zdarzeń
+            EventLog.WriteEntry("Application", CPUusageMessage, EventLogEntryType.Information, 1234);
         }
         private void label1_Click(object sender, EventArgs e)
         {
