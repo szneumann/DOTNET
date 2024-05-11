@@ -1,0 +1,9 @@
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\bin\Debug\Zadanie3_5.exe.config
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\bin\Debug\Zadanie3_5.exe
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\bin\Debug\Zadanie3_5.pdb
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\obj\Debug\Zadanie3_5.csproj.AssemblyReference.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\obj\Debug\Zadanie3_5.Properties.Resources.resources
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\obj\Debug\Zadanie3_5.csproj.GenerateResource.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\obj\Debug\Zadanie3_5.csproj.CoreCompileInputs.cache
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\obj\Debug\Zadanie3_5.exe
+C:\Users\dev\Documents\GitHub\DOTNET\Zadanie3_5\Zadanie3_5\obj\Debug\Zadanie3_5.pdb
