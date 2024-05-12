@@ -7,56 +7,38 @@ public class SymmetricEncryptionBenchmark
 {
     public static void Main()
     {
-        // Rozmiary danych do szyfrowania
-        int[] dataSizes = { 1024, 1048576 }; // 1KB, 1MB
+        int dataSizeInBytes = 1024 * 1024; // 1MB
 
-        // Algorytmy szyfrowania do przetestowania
-        string[] algorithms = { "AES", "Rijndael", "DES", "TripleDES" };
+        string[] keySizes = { "128", "256" };
 
-        foreach (string algorithm in algorithms)
+        foreach (string keySize in keySizes)
         {
-            Console.WriteLine($"Benchmarking {algorithm}...");
+            Console.WriteLine($"Benchmarking Rijndael Managed with {keySize}-bit key...");
 
-            foreach (int dataSize in dataSizes)
-            {
-                Console.WriteLine($"Data Size: {dataSize} bytes");
+            double memoryEncryptionTime = MeasureMemoryEncryptionTime(keySize, dataSizeInBytes);
+            double diskEncryptionTime = MeasureDiskEncryptionTime(keySize, dataSizeInBytes);
 
-                // Generowanie losowych danych
-                byte[] data = GenerateRandomData(dataSize);
+            double memoryThroughput = dataSizeInBytes / memoryEncryptionTime;
+            double diskThroughput = dataSizeInBytes / diskEncryptionTime;
 
-                // Pomiar czasu szyfrowania
-                double encryptionTime = MeasureEncryptionTime(algorithm, data);
-                Console.WriteLine($"Encryption Time: {encryptionTime} seconds");
+            Console.WriteLine($"Memory Encryption Time per Block: {memoryEncryptionTime} seconds");
+            Console.WriteLine($"Memory Throughput: {memoryThroughput} bytes/second");
 
-                // Pomiar czasu deszyfrowania
-                double decryptionTime = MeasureDecryptionTime(algorithm, data);
-                Console.WriteLine($"Decryption Time: {decryptionTime} seconds");
+            Console.WriteLine($"Disk Encryption Time per Block: {diskEncryptionTime} seconds");
+            Console.WriteLine($"Disk Throughput: {diskThroughput} bytes/second");
 
-                // Obliczenie throughput
-                double throughputMemory = dataSize / encryptionTime;
-                double throughputDisk = dataSize / decryptionTime;
-
-                Console.WriteLine($"Throughput (Memory): {throughputMemory} bytes/second");
-                Console.WriteLine($"Throughput (Disk): {throughputDisk} bytes/second");
-            }
+            Console.WriteLine();
         }
     }
 
-    // Metoda do generowania losowych danych
-    private static byte[] GenerateRandomData(int size)
+    private static double MeasureMemoryEncryptionTime(string keySize, int dataSize)
     {
-        byte[] data = new byte[size];
-        new Random().NextBytes(data);
-        return data;
-    }
-
-    // Metoda do mierzenia czasu szyfrowania
-    private static double MeasureEncryptionTime(string algorithmName, byte[] data)
-    {
+        byte[] data = GenerateRandomData(dataSize);
         Stopwatch sw = Stopwatch.StartNew();
 
-        using (SymmetricAlgorithm algorithm = GetAlgorithm(algorithmName))
+        using (RijndaelManaged algorithm = new RijndaelManaged())
         {
+            algorithm.KeySize = int.Parse(keySize);
             algorithm.GenerateKey();
             algorithm.GenerateIV();
 
@@ -73,46 +55,40 @@ public class SymmetricEncryptionBenchmark
         return sw.Elapsed.TotalSeconds;
     }
 
-    // Metoda do mierzenia czasu deszyfrowania
-    private static double MeasureDecryptionTime(string algorithmName, byte[] data)
+    private static double MeasureDiskEncryptionTime(string keySize, int dataSize)
     {
+        string filePath = "encrypted_file.bin";
+        byte[] data = GenerateRandomData(dataSize);
+        File.WriteAllBytes(filePath, data);
+
         Stopwatch sw = Stopwatch.StartNew();
 
-        using (SymmetricAlgorithm algorithm = GetAlgorithm(algorithmName))
+        using (RijndaelManaged algorithm = new RijndaelManaged())
         {
+            algorithm.KeySize = int.Parse(keySize);
             algorithm.GenerateKey();
             algorithm.GenerateIV();
 
-            using (MemoryStream ms = new MemoryStream(data))
+            using (FileStream fsInput = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            using (FileStream fsOutput = new FileStream("encrypted_file_out.bin", FileMode.Create, FileAccess.Write))
+            using (CryptoStream cs = new CryptoStream(fsOutput, algorithm.CreateEncryptor(), CryptoStreamMode.Write))
             {
-                using (CryptoStream cs = new CryptoStream(ms, algorithm.CreateDecryptor(), CryptoStreamMode.Read))
-                {
-                    byte[] decryptedData = new byte[data.Length];
-                    cs.Read(decryptedData, 0, decryptedData.Length);
-                }
+                fsInput.CopyTo(cs);
             }
         }
 
         sw.Stop();
+        File.Delete(filePath);
+        File.Delete("encrypted_file_out.bin");
+
         return sw.Elapsed.TotalSeconds;
     }
 
-    // Metoda pomocnicza do uzyskania algorytmu szyfrowania na podstawie nazwy
-    private static SymmetricAlgorithm GetAlgorithm(string algorithmName)
+    private static byte[] GenerateRandomData(int size)
     {
-        switch (algorithmName)
-        {
-            case "AES":
-                return Aes.Create();
-            case "Rijndael":
-                return Rijndael.Create();
-            case "DES":
-                return DES.Create();
-            case "TripleDES":
-                return TripleDES.Create();
-            default:
-                throw new ArgumentException("Unknown algorithm");
-        }
+        byte[] data = new byte[size];
+        new Random().NextBytes(data);
+        return data;
     }
 }
 

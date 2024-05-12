@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Zadanie3_1
 {
@@ -80,8 +81,6 @@ namespace Zadanie3_1
 
             // Stwórz stoper
             Stopwatch encryptionStopwatch = new Stopwatch();
-            // Aby czas się nie nawarstwiał z poprzedniego procesu szyfrowania, zresetuj stoper
-            encryptionStopwatch.Reset();
 
             // Rozpocznij pomiar czasu szyfrowania
             encryptionStopwatch.Start();
@@ -94,11 +93,12 @@ namespace Zadanie3_1
                 cipherHEXtextBox.Text = BitConverter.ToString(encryptedBytes).Replace("-", "");
             }
 
-            // Zatrzymaj pomiar czasu szyfrowania i wyświetl czas na interfejsie
+            // Zatrzymaj pomiar czasu szyfrowania i wyświetl w TextBox
             encryptionStopwatch.Stop();
-            timeEncryptionTextBox.Text = $"Czas szyfrowania: {encryptionStopwatch.ElapsedMilliseconds} ms";
-
-
+            if (encryptionStopwatch.ElapsedMilliseconds < 1)
+                timeEncryptionTextBox.Text = $"Czas szyfrowania: < 1 ms";
+            else
+                timeEncryptionTextBox.Text = $"Czas szyfrowania: {encryptionStopwatch.ElapsedMilliseconds} ms";
         }
 
 
@@ -131,7 +131,10 @@ namespace Zadanie3_1
 
             // Zatrzymaj pomiar czasu deszyfrowania i wyświetl czas na interfejsie
             decryptionStopwatch.Stop();
-            timeDecryptionTextBox.Text = $"Czas deszyfrowania: {decryptionStopwatch.ElapsedMilliseconds} ms";
+            if (decryptionStopwatch.ElapsedMilliseconds < 1)
+                timeDecryptionTextBox.Text = $"Czas deszyfrowania: < 1 ms";
+            else
+                timeDecryptionTextBox.Text = $"Czas deszyfrowania: {decryptionStopwatch.ElapsedMilliseconds} ms";
 
         }
 
