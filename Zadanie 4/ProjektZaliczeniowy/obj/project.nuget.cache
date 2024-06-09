@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gkh33FuyVYD5IRJWLTNHnDzJuotAZ8gbKA6Sem1RVP5dpdQw9IHClU3Cixgb6Wc2pf9sD4JYJ9A9v5qhTy1kTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dev\\Documents\\GitHub\\DOTNET\\Zadanie 4\\ProjektZaliczeniowy\\ProjektZaliczeniowy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dev\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\system.text.json\\8.0.3\\system.text.json.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
